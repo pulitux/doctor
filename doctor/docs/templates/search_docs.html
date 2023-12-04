@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<title>Busqueda de doctor</title>
+</head>
+<body>
+    <h1>Buscar Doctor: </h1>
+    <p>
+            <form action="get_docs.html">
+                <label for="doctor">Busca en la lista:
+                <input type="text" id="doctor" name="doctor" list="docs" />
+                <datalist id="docs">
+                    {%for id_h, id_d, name, esp, sal in lista_docs %}
+                    <option value="{{name}}"></option>
+                    {% endfor%}
+                </datalist>
+                <input type="submit" value="Busca en la lista">
+                </form>
+            </label>
+    <p>
+ </body>
+</html>

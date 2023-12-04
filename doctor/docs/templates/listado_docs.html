@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Doctores</title>
+</head>
+<body>
+<h1 style="color:blue;">Listado de Doctores</h1>
+
+<table border="1" style="width:100%">
+        <tr>
+            <th>ID del Hospital</th>
+            <th>ID de Doctor</th>
+            <th>Nombre</th>
+            <th>Especialidad</th>
+            <th>Salario</th>
+        </tr>
+        {% for id_h, id_d, name, esp, sal in lista_docs%}
+            <tr>
+                <td>{{id_h}}</td>
+                <td>{{id_d}}</td>
+                <td>{{name}}</td>
+                <td>{{esp}}</td>
+                <td>{{sal}}</td>
+            </tr>
+       {% endfor%}
+</table>
+</body>
+</html>
